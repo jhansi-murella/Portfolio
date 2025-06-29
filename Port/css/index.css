@@ -84,6 +84,7 @@ a:focus {
 .navbar-expand-md .navbar-nav .nav-link.active i{
     color: #ffffff;
 }
+
 .navbar-text {
   font-size: 1.25rem;
   white-space: nowrap;
@@ -92,6 +93,13 @@ a:focus {
 .navbar-nav {
   display: flex;
   gap: 1rem;
+}
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* Responsive fix for mobile */
@@ -102,11 +110,7 @@ a:focus {
     padding-top: 1rem;
     gap: 0.5rem;
   }
-  .navbar-collapse {
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-  }
+
   .navbar-nav {
     width: 100%;
     flex-direction: column;
@@ -190,7 +194,7 @@ a:focus {
         flex-direction: column;
     }
     
-    .wrapper .sidebar:hover .navbar-expand-md .navbar-nav .nav-link {
+    .wrapper .sidebar:hover .nav-link {
         padding: 5px 30px 7px 30px;
     }
     
@@ -312,11 +316,7 @@ a:focus {
         display: block;
         width: 100%;
     }
-    
-    .navbar-expand-md .navbar-nav .nav-link {
-        padding: 5px 30px 7px 30px;
-    }
-    
+        
     .sidebar .sidebar-footer {
         display: block;
     }
@@ -990,4 +990,3 @@ a:focus {
   vertical-align: middle;
   margin-right: 8px;
 }
-
