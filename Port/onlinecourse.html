@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data-Driven Insights – Online Courses</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/online.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="spinner-border text-success"></div>
+</div>
+
+<header>
+  <div class="container">
+    <a href="applied.html" class="btn btn-light nav-btn">Back</a>
+    <h1>Explore Trends in Online Educations</h1>
+  </div>
+</header>
+
+<section class="container">
+  <ul class="nav nav-pills mb-3 justify-content-center" id="insightsTabs" role="tablist">
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#overview">Overview</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#stats">Statistics</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#analysis">Analysis</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#recommendations">Recommendations</button></li>
+  </ul>
+
+  <div class="tab-content">
+<!-- Overview -->
+<div class="tab-pane fade show active" id="overview">
+  <div class="row">
+    <div class="col">
+      <h3>Background & Topic</h3>
+      <p>
+        The project analyzes the <strong>Online Courses Usage and History Dataset</strong> to explore trends in online education.
+        <br><br>
+        The rise of online learning—especially post-pandemic—has made it important to understand user engagement, course popularity,
+        and completion rates.
+      </p>
+      <p><strong>Source:</strong> Kaggle – Online Courses Dataset.</p>
+      <ul>
+        <li>Demographics (age, region)</li>
+        <li>Course preferences (topics, duration)</li>
+        <li>Engagement (time spent)</li>
+        <li>Completion vs. dropout rates</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!-- Statistics -->
+    <div class="tab-pane fade" id="stats">
+      <div class="row">
+        <div class="col-md-6">
+          <img loading="lazy" src="img/rs.png" class="img-slide" alt="Stats Slide">
+        </div>
+        <div class="col-md-6">
+          <h3>Descriptive Statistics</h3>
+          <ul>
+            <li><strong>Avg Duration:</strong> 55.14 hrs</li>
+            <li><strong>Completion Rate:</strong> 75.12%</li>
+            <li><strong>Avg Rating:</strong> 3.99 / 5</li>
+            <li><strong>Price Range:</strong> ~$10 to ~$200</li>
+          </ul>
+          <p><strong>Insight:</strong> Premium pricing doesn't deter engagement if ratings are high.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis -->
+    <div class="tab-pane fade" id="analysis">
+      <div class="accordion" id="analysisAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#anova">
+              ANOVA: Completion Rates Across Categories
+            </button>
+          </h2>
+          <div id="anova" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <img loading="lazy" src="img/anova.jpg" class="img-slide" alt="ANOVA Slide"/>
+              <p>No significant differences across categories. Focus on <strong>Data Science</strong> for its higher completion (48.7%).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#correlation">
+              Correlation: Price vs Completion
+            </button>
+          </h2>
+          <div id="correlation" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <img loading="lazy" src="img/cr.png" class="img-slide" alt="Correlation Slide"/>
+              <p>Price and completion rates are nearly uncorrelated. Consider price as a commitment driver instead.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#clusters">
+              Cluster & Factor Analysis
+            </button>
+          </h2>
+          <div id="clusters" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <img loading="lazy" src="img/ca.png" class="img-slide" alt="Cluster Slide"/>
+              <p>Three user segments exist. Final clusters converge on similar price & completion values. Targeted marketing recommended.</p>
+              <img loading="lazy" src="img/fa.png" class="img-slide" alt="Factor Slide"/>
+              <p><strong>Factors Identified:</strong> Value (price/duration) & Quality (completion/rating).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="tab-pane fade" id="recommendations">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Recommendations</h3>
+          <ol>
+            <li>Set pricing thresholds based on category.</li>
+            <li>Design with engagement in mind.</li>
+            <li>Segment marketing by learner type.</li>
+            <li>Focus on top-performing categories.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="text-center py-4 bg-light">
+  <p class="mb-0">&copy; 2025 Jhansi Priya. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Preloader remove
+  window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+  });
+
+  // Smooth scroll to tab pane
+  document.querySelectorAll('button[data-bs-toggle="pill"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector(btn.dataset.bsTarget).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

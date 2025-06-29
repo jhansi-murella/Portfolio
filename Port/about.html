@@ -1,0 +1,101 @@
+<!-- Required CDNs -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+<!-- About Me Section -->
+<section id="about" class="about py-5 bg-dark text-light position-relative">
+  <div class="container">
+    <div class="content-header mb-4 text-center">
+      <h2 class="neon-title wow animate__animated animate__fadeInDown">About Me</h2>
+      <hr class="mx-auto" style="width: 60px; border-top: 3px solid #0ff;">
+      <div class="typing-effect mx-auto mt-3">
+        <span id="typing-text"></span>
+      </div>
+    </div>
+
+    <div class="row align-items-center mt-4">
+      <div class="col-md-5 text-center mb-4 mb-md-0 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+        <img src="img/about.jpg" alt="Jhansi Priya Murella" class="img-fluid rounded shadow futuristic-img">
+      </div>
+      <div class="col-md-7 wow animate__animated animate__fadeInRight" data-wow-delay="0.4s">
+        <p class="lead">
+          I am a <span class="highlight">highly motivated</span> and <span class="highlight">detail-oriented</span> student at <strong>Saint Louis University</strong>, with a solid foundation in <span class="highlight">IT Support</span>, <span class="highlight">Programming</span>, and <span class="highlight">Data Analysis</span>. My experience spans academic projects in <span class="highlight">Machine Learning</span>, <span class="highlight">Data Visualization</span>, and <span class="highlight">Web Development</span>.
+        </p>
+        <p>
+          <i class="bi bi-award-fill text-info"></i> <strong>CCNA Certified</strong> &nbsp;|&nbsp;
+          <i class="bi bi-code-slash text-warning"></i> Skilled in Python, Java, HTML/CSS &nbsp;|&nbsp;
+          <i class="bi bi-terminal-fill text-success"></i> Linux/Windows Environments
+        </p>
+        <blockquote class="blockquote mt-3 border-start border-info ps-3">
+          <p class="mb-0 text-info">"I believe in turning data into decisions and ideas into action."</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Styles -->
+<style>
+  body {
+    background-color: #0d0d0d;
+  }
+
+  .neon-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    letter-spacing: 2px;
+  }
+
+  .typing-effect {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    color: #0ff;
+    border-right: 2px solid #0ff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  .highlight {
+    color: #0ff;
+    font-weight: bold;
+  }
+
+  .futuristic-img {
+    border: 3px solid #0ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .futuristic-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  }
+
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>
+
+<!-- Typing Animation Script -->
+<script>
+  const text = "Turning passion into real-world impact through code, data, and collaboration.";
+  let i = 0;
+  const speed = 45;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typing-text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeWriter);
+</script>
